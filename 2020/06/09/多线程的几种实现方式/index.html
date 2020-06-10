@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://fernyin.github.io">
   <title>多线程的几种实现方式 | fernyin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这篇文章主要写些关于线程的几种实现方法以及他们之间的区别，主要分析下submit和execute的区别。 线程的3种实现方式 1.继承Thread，重写run()方法 2.实现Runnable，重写run()方法 3.实现Callable，重写call方法 其中前两种没有返回值，第三种可以用Future.get()获取返回值。 一般我们配合线程池使用，例如：  可以看到submit有三种方法，返回">
+  <meta name="description" content="这篇文章主要写些关于线程的几种实现方法以及他们之间的区别，主要分析下submit和execute的区别。 线程的3种实现方式 1.继承Thread，重写run()方法 2.实现Runnable，重写run()方法 3.实现Callable，重写call方法 其中前两种没有返回值，第三种可以用Future.get()获取返回值。 &amp;lt;！–more–&amp;gt; 一般我们配合线程池使用，例如：  可以">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多线程的几种实现方式">
 <meta property="og:url" content="https://fernyin.github.io/2020/06/09/多线程的几种实现方式/index.html">
 <meta property="og:site_name" content="fernyin">
-<meta property="og:description" content="这篇文章主要写些关于线程的几种实现方法以及他们之间的区别，主要分析下submit和execute的区别。 线程的3种实现方式 1.继承Thread，重写run()方法 2.实现Runnable，重写run()方法 3.实现Callable，重写call方法 其中前两种没有返回值，第三种可以用Future.get()获取返回值。 一般我们配合线程池使用，例如：  可以看到submit有三种方法，返回">
+<meta property="og:description" content="这篇文章主要写些关于线程的几种实现方法以及他们之间的区别，主要分析下submit和execute的区别。 线程的3种实现方式 1.继承Thread，重写run()方法 2.实现Runnable，重写run()方法 3.实现Callable，重写call方法 其中前两种没有返回值，第三种可以用Future.get()获取返回值。 &amp;lt;！–more–&amp;gt; 一般我们配合线程池使用，例如：  可以">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://fernyin.github.io/2020/06/09/多线程的几种实现方式/image-1.png">
-<meta property="og:updated_time" content="2020-06-10T16:29:19.857Z">
+<meta property="og:updated_time" content="2020-06-10T16:38:46.219Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多线程的几种实现方式">
-<meta name="twitter:description" content="这篇文章主要写些关于线程的几种实现方法以及他们之间的区别，主要分析下submit和execute的区别。 线程的3种实现方式 1.继承Thread，重写run()方法 2.实现Runnable，重写run()方法 3.实现Callable，重写call方法 其中前两种没有返回值，第三种可以用Future.get()获取返回值。 一般我们配合线程池使用，例如：  可以看到submit有三种方法，返回">
+<meta name="twitter:description" content="这篇文章主要写些关于线程的几种实现方法以及他们之间的区别，主要分析下submit和execute的区别。 线程的3种实现方式 1.继承Thread，重写run()方法 2.实现Runnable，重写run()方法 3.实现Callable，重写call方法 其中前两种没有返回值，第三种可以用Future.get()获取返回值。 &amp;lt;！–more–&amp;gt; 一般我们配合线程池使用，例如：  可以">
 <meta name="twitter:image" content="https://fernyin.github.io/2020/06/09/多线程的几种实现方式/image-1.png">
   
     <link rel="alternative" href="/atom.xml" title="fernyin" type="application/atom+xml">
@@ -170,6 +170,7 @@
 <p>2.实现Runnable，重写run()方法</p>
 <p>3.实现Callable，重写call方法</p>
 <p>其中前两种没有返回值，第三种可以用Future.get()获取返回值。</p>
+<p>&lt;！–more–&gt;</p>
 <p>一般我们配合线程池使用，例如：</p>
 <p><img src="/2020/06/09/多线程的几种实现方式/image-1.png" alt="Alt text"></p>
 <p>可以看到submit有三种方法，返回值是Future接口，execute(Runnable command)只有一种。</p>

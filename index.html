@@ -166,6 +166,7 @@
 <p>2.实现Runnable，重写run()方法</p>
 <p>3.实现Callable，重写call方法</p>
 <p>其中前两种没有返回值，第三种可以用Future.get()获取返回值。</p>
+<p>&lt;！–more–&gt;</p>
 <p>一般我们配合线程池使用，例如：</p>
 <p><img src="/2020/06/09/多线程的几种实现方式/image-1.png" alt="Alt text"></p>
 <p>可以看到submit有三种方法，返回值是Future接口，execute(Runnable command)只有一种。</p>
